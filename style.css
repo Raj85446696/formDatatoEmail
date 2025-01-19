@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.form{
+    padding: 20px;
+    margin: 20px;
+    margin-left: 350px;
+    width: 600px;
+    background-color: bisque;
+    color: coral;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+label{
+    padding: 20px;
+}
+input{
+    margin: 10px;
+}
+.buttons{
+    margin: 20px;
+}
+button{
+    background-color:coral;
+    color: aliceblue;
+    padding: 3px;
+    border-color:coral;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: rgba(249, 126, 38, 0.821);
+}
+
+.gen{
+    margin: 0;
+    padding: 0;
+}
+
+.gen label{
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+}

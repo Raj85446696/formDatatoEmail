@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      rel="icon"
+      href="https://www.kindpng.com/picc/m/274-2747600_form-icon-png-transparent-png.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="form">
+      <h1>Personal Data Form</h1>
+      <form
+        id="registrationForm"
+        action="https://formspree.io/f/xbllvzkr"
+        method="post"
+      >
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="dob">DOB :</label>
+        <input type="date" name="dob" id="dob">
+
+
+        <div class="gen">
+          <label for="gender">Gender :</label>
+        <input type="radio" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male">
+        <label for="male">Female</label>
+        <input type="radio" name="gender" value="male">
+        <label for="male">Other</label>
+        </div>
+
+
+        <br />
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="phone">Phone :</label>
+        <input type="text" name="phone" id="phone" placeholder="+91-00-00-000-000" required />
+
+        <br>
+        <label for="image">Upload photo:</label>
+        <input type="file" name="image">
+
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      document.getElementById("registrationForm").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        
+        const form = this; 
+        
+        Swal.fire({
+          title: "Form Submitted!",
+          text: "Thank you for registering. We will get back to you soon.",
+          icon: "success",
+          confirmButtonText: "Okay",
+        }).then(() => {
+          form.submit();
+        });
+      });
+    </script>
+    
+  </body>
+</html>
